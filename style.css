@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  z-index: 100;
+  gap: 0px 0px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.box {
+  border: 1px solid red;
+}
