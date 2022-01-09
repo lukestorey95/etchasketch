@@ -2,11 +2,25 @@
   display: grid;
   z-index: 100;
   gap: 0px 0px;
-  width: 700px;
-  height: 700px;
-  border: 1px solid black;
+  width: 600px;
+  height: 600px;
+  border: 3px solid black;
+  margin: auto;
 }
 
-.box {
-  border: 1px solid red;
+h1 {
+  text-align: center;
+}
+
+.settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 1em;
+}
+
+#clear {
+  height: 2em;
+  width: 4.5em;
 }
