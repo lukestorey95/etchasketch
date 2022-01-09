@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const boxes = container.querySelectorAll('.box')
 const slider = document.getElementById("myRange");
 let size = 9;
+let colour = '#000000';
 
 function createGrid(size) {
     for (let i = 0; i < (size ** 2); i++) {
@@ -9,11 +10,16 @@ function createGrid(size) {
         container.style.gridTemplateColumns = `repeat(${size},1fr)`;
         container.style.gridTemplateRows = `repeat(${size},1fr)`;
         container.appendChild(div).classList.add('box');
-
     }
 }
 
 createGrid(size);
+
+colorPicker.addEventListener("input", changeColour);
+
+function changeColour(event) {
+    colour = event.target.value;
+}
 
 function reset() {
     const boxes = container.querySelectorAll('.box')
@@ -39,7 +45,7 @@ function active() {
 
     boxes.forEach(box => {
         box.addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = 'black';
+            e.target.style.backgroundColor = colour;
         })
     })
 }    
